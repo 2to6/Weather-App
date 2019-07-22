@@ -22,7 +22,7 @@ class CounterButton extends React.Component{
 
   render() {
     return (
-      <View>
+      <View style={styles.buttonContainer}>
         <Text>{this.state.counter}</Text>
         <Button title={'click me!'} onPress={this.clickHandler}/>
       </View>
@@ -35,7 +35,7 @@ export default class App extends React.Component{
     return (
       <View style={styles.container}>
         <CounterButton counter={0}/>
-        <CounterButton counter={1}/>
+        <CounterButton count={1}/>
         <CounterButton counter={2}/>
         <CounterButton counter={3}/>
       </View>
@@ -50,4 +50,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  
+  buttonContainer:{
+    width: 300,
+  }
 });
