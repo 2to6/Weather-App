@@ -52,6 +52,6 @@ const styles = StyleSheet.create({
   },
   
   buttonContainer:{
-    width: 300,
+    width: '100%',
   }
 });
