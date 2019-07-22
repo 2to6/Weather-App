@@ -2,10 +2,12 @@ import React from 'react';
 import { Button ,StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component{
+  clickHandler = () => console.log('Clicked!');
+
   render(){
     return (
       <View style={styles.container}>
-        <Button title={'click me!'} onPress={() => console.log('Clicked!')}/>
+        <Button title={'click me!'} onPress={this.clickHandler}/>
       </View>
     );
   }
