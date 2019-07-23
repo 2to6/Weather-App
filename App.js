@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, StyleSheet, Text, ScrollView, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import { Constants } from 'expo';
 
 export default class App extends React.Component {
@@ -22,11 +22,15 @@ export default class App extends React.Component {
       });
   }
 
+  onPressCity(item){
+    console.log('onPressCity =', item);
+  }
+
   renderItem(city) {
     return (
-      <View style={styles.item}>
+      <TouchableOpacity style={styles.item} onPress={this.onPressCity}>
         <Text style={styles.text}>{city}</Text>
-      </View>
+      </TouchableOpacity>
     );
   }
   render() {
