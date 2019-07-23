@@ -20,8 +20,8 @@ export default class WeatherDetailScreen extends React.Component {
 
     componentDidMount() {
         const { navigation } = this.props;
-        //const city = navigation.getParam('city', null);
-        const city = 'Daejeon';
+        const city = navigation.getParam('city', null);
+        //const city = 'Daejeon';
 
         fetch(`http://demo6468405.mockable.io/weather-crawlers/current-weathers/by-city-name/${city}`)
             .then(response => response.json())
@@ -44,10 +44,12 @@ export default class WeatherDetailScreen extends React.Component {
         }
 
         let celsius = this.state.main.temp - 273.15;
+        let humidity = this.state.main.humidity;
 
         return (
             <View style={styles.container}>
                 <Text>온도: {celsius.toFixed(1)}</Text>
+                <Text>습도: {humidity.toFixed(1)}</Text>
             </View>
         );
     }
