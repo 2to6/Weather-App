@@ -3,27 +3,31 @@ import { FlatList, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import { Constants } from 'expo';
 
 export default class CityList extends React.Component {
-  constructor(props){
-    super(props);
+  static navigationOptions = {
+    title: 'Cities',
+  };
 
-    this.state = {
-      cities: [],
-    };
+  constructor(props){
+      super(props);
+
+      this.state = {
+          cities: [],
+      };
   }
 
   componentDidMount(){
-    fetch('http://demo6468405.mockable.io/weather-crawlers/cities')
-      .then(response => response.json())
-      .then(cities => {
-        console.log('cities = ', cities.length);
-        this.setState({
-          cities
+      fetch('http://demo6468405.mockable.io/weather-crawlers/cities')
+        .then(response => response.json())
+        .then(cities => {
+            console.log('cities =', cities.length);
+            this.setState({
+                cities
+            });
         });
-      });
   }
 
   onPressCity(item){
-    console.log('onPressCity =', item);
+      console.log('onPressCity = ', item);
   }
 
   renderItem(city) {
