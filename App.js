@@ -3,16 +3,29 @@ import { FlatList, StyleSheet, Text, ScrollView, View } from 'react-native';
 import { Constants } from 'expo';
 
 export default class App extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      cities: [],
+    };
+  }
+
   componentDidMount(){
     fetch('http://demo6468405.mockable.io/weather-crawlers/cities')
       .then(response => response.json())
-      .then(console.log);
+      .then(cities => {
+        console.log('cities = ', cities.length);
+        this.setState({
+          cities
+        });
+      });
   }
 
-  renderItem({ name }) {
+  renderItem(city) {
     return (
       <View style={styles.item}>
-        <Text style={styles.text}>{name}</Text>
+        <Text style={styles.text}>{city}</Text>
       </View>
     );
   }
@@ -20,8 +33,8 @@ export default class App extends React.Component {
     return (
       <FlatList style={styles.container}
         renderItem = {({item}) => this.renderItem(item)}
-        keyExtractor={(item) => item.name}
-        data = {this.fruits}
+        keyExtractor={item => item}
+        data = {this.state.cities}
       />
     );
   }
