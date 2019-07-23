@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
+import { Constants } from 'expo';
 
 export default class App extends React.Component {
   render() {
@@ -15,6 +16,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    marginTop: Constants.statusBarHeight,   //핸드폰 상단의 상태표시줄을 건드리지 않게함
+
     borderColor: 'red',
     borderWidth: 2,
   },
