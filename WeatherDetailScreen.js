@@ -23,7 +23,7 @@ export default class WeatherDetailScreen extends React.Component {
         const city = navigation.getParam('city', null);
         //const city = 'Daejeon';
 
-        fetch(`http://demo6468405.mockable.io/weather-crawlers/current-weathers/by-city-name/${city}`)
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=b59b2f6b4c62b33a007db6708713d1e6`)
             .then(response => response.json())
             .then(info => {
                 this.setState({
