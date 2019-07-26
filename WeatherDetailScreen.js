@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image } from 'react-native';
 import { Constants } from 'expo';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default class WeatherDetailScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
@@ -49,165 +50,221 @@ export default class WeatherDetailScreen extends React.Component {
 
         switch (icon) {
             case "01d":
-                    return (
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
                         <View style={styles.container}>
-                            <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
-                            <Text>날씨: {description}</Text>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/01d.png')} />
-                        </View>
-                    );
-            case "01n":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "01n":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/01n.png')} />
-                        </View>
-                    );
-            case "02d":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "02d":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/02d.png')} />
-                        </View>
-                    );
-            case "02n":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "02n":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/02n.png')} />
-                        </View>
-                    );
-            case "03d":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "03d":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/03d.png')} />
-                        </View>
-                    );
-            case "03n":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "03n":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/03n.png')} />
-                        </View>
-                    );
-            case "04d":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "04d":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/04d.png')} />
-                        </View>
-                    );
-            case "04n":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "04n":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/04n.png')} />
+                            <Text>온도: {celsius.toFixed(1)}</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
+                            <Text>날씨: {description}</Text>
                         </View>
-                    );
+                    </LinearGradient>
+                );
             case "09d":
-                    return (
-                        <View style={styles.container}>
-                            <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
-                            <Text>날씨: {description}</Text>
-                            <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
-                                source={require('./weather-icon/09d.png')} />
-                        </View>
-                    );
+                return (<LinearGradient
+                    colors={['#4c669f', '#3b5998', '#192f6a']}>
+                    <View style={styles.container}>
+                        <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
+                            source={require('./weather-icon/09d.png')} />
+                        <Text>온도: {celsius.toFixed(1)}</Text>
+                        <Text>습도: {humidity.toFixed(1)}</Text>
+                        <Text>날씨: {description}</Text>
+                    </View>
+                </LinearGradient>
+                );
             case "09n":
-                    return (
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
                         <View style={styles.container}>
-                            <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
-                            <Text>날씨: {description}</Text>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/09n.png')} />
-                        </View>
-                    );
-            case "10d":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "10d":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/10d.png')} />
-                        </View>
-                    );
-            case "10n":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "10n":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
+
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/10n.png')} />
-                        </View>
-                    );
-            case "11d":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+                );
+            case "11d":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
+
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/11d.png')} />
-                        </View>
-                    );
-            case "11n":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+                        </View>
+                    </LinearGradient>
+
+                );
+            case "11n":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
+
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/11n.png')} />
-                        </View>
-                    );
-            case "50d": 
-            return (
-                <View style={styles.container}>
-                    <Text>온도: {celsius.toFixed(1)}</Text>
-                    <Text>습도: {humidity.toFixed(1)}%</Text>
-                    <Text>날씨: {description}</Text>
-                    <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
-                        source={require('./weather-icon/50d.png')} />
-                </View>
-            );
-            case "50n":
-                    return (
-                        <View style={styles.container}>
                             <Text>온도: {celsius.toFixed(1)}</Text>
-                            <Text>습도: {humidity.toFixed(1)}%</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
                             <Text>날씨: {description}</Text>
+
+                        </View>
+                    </LinearGradient>
+                );
+            case "50d":
+                return (
+                    <LinearGradient
+                        colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
+
                             <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
                                 source={require('./weather-icon/50d.png')} />
+                            <Text>온도: {celsius.toFixed(1)}</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
+                            <Text>날씨: {description}</Text>
+
                         </View>
-                    );
+                    </LinearGradient>
+                );
+            case "50n":
+                return (
+                    <LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']}>
+                        <View style={styles.container}>
+
+                            <Image style={{ height: '50%', width: '50%', resizeMode: 'contain' }}
+                                source={require('./weather-icon/50d.png')} />
+
+                            <Text>온도: {celsius.toFixed(1)}</Text>
+                            <Text>습도: {humidity.toFixed(1)}</Text>
+                            <Text>날씨: {description}</Text>
+
+                        </View>
+                    </LinearGradient>
+                );
         }
     }
 }
