@@ -1,24 +1,32 @@
 import React from 'react';
-import {  StyleSheet, Text, View, Button,TouchableOpacity } from 'react-native';
-import { Constants } from 'expo';
+import {  StyleSheet, Text, View, TouchableOpacity, Image, Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
 
 export default class StartScreen extends React.Component{
 
     static navigationOptions = {
-        title: 'Home',
+        title: 'OpenWeather',
     };
 
     render() {
+    
         const {navigation} = this.props;
         return (
-            <TouchableOpacity style={styles.item}
-                onPress={() => {
-                    navigation.navigate("CityList")
-                }}>
-                    <Text style={styles.Text}>main page</Text>
-                </TouchableOpacity>
-
-           
+            <View style={styles.container}>
+                        <View style={styles.top}>
+                            <Image style={{ height: '50%', width: '50%', resizeMode: 'contain'}}
+                                source={require('./weather-logo/logo.png')} />
+                        </View>
+                        <View style={styles.bottom}>
+                            <TouchableOpacity style={{backgroundColor: 'coral'}}
+                                onPress={() => {
+                                navigation.navigate("CityList")
+                                }}>
+                                <Text style={styles.text}>Show CityList</Text>
+                            </TouchableOpacity>
+                        </View>
+             </View>
         );
     }
 }
@@ -26,23 +34,21 @@ export default class StartScreen extends React.Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-
+        backgroundColor: '#696969'
     },
-
     text: {
-        fontSize: 20,
+        fontSize: 40,
         textAlign: 'center',
+        color: 'white',
     }, 
-    item: {
+    top: {
         flex: 1,
-        height: 50,
-        justifyContent: 'center',
         alignItems: 'center',
-
-        borderWidth: 1,
-        borderColor: 'orange',
+        justifyContent: 'flex-end'
+    },
+    bottom: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'flex-start'
     },
 });
